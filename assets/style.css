@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --green: #2B403A;
+  --lighgreen: #807B67;
+  --background: #FBFAF5;
+  --lighwhite:#D1D5D0;
+  --black: #1F1F1D;
+  color: var(--black);
+  background: var(--background);
+}
+body{
+  position: relative;
+  display: grid;
+  grid-template-columns: 150px calc(100% - 550px) 400px;
+  overflow-x: hidden;
+  width: 100%;
+  height: 2000px;
+}
+aside{
+  position: relative;
+}
+aside .Wrapper{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 150px;
+  background: white;
+  padding-top: 25px;
+}
+.Rightbar .Wrapper{
+  padding: 25px 25px 25px 50px;
+  width: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--green);
+  gap: 50px;
+}
+.Rightbar .User{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all .3s ease;
+  margin-left: -15px;
+}
+.Rightbar .User:hover{
+  cursor: pointer;
+  background-color: #1F2D26;
+}
+.Rightbar .User img{
+  border-radius: 10px;
+  width: 65px;
+  object-fit: cover;
+}
+.Rightbar .User h3{
+  font-weight: 500;
+  color: white;
+}
+.Rightbar .User p{
+  color: var(--lighwhite);
+}
+.Rightbar .Adress{
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  transform: translateX(-15px);
+  transition: all .3s ease;
+}
+.Rightbar .Adress:hover{
+  cursor: pointer;
+  background-color: #1F2D26;;
+}
+.Rightbar .Adress h3,
+.Rightbar .Menu h3{
+  font-weight: 600;
+  color: white;
+}
+.Rightbar .Adress img{
+  width: 15px;
+}
+.Rightbar .Adress p{
+  width: 200px;
+  color: var(--lighwhite);
+}
+.Rightbar .Menu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.Rightbar .MenuItem{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px;
+  transform: translateX(-15px);
+  border-radius: 15px;
+  width: 350px;
+  gap: 15px;
+}
+.Rightbar .MenuItem:hover{
+  cursor: pointer;
+  background-color: #1F2D26;
+
+}
+.Rightbar .MenuItem .Close{
+  transition: all .3s ease;
+}
+.Rightbar .MenuItem .Close:hover{
+  cursor: pointer;
+  transform: scale(0.8);
+}
+.Rightbar .MenuItem .ItemImg{
+  height: 80px;
+  width: 125px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.Rightbar .MenuItem h3{
+  font-size: 16px;
+}
+.Rightbar .MenuItem .Inner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Rightbar .MenuItem .Inner .Actions{
+  display: flex;
+  justify-content: space-between;
+}
+.Rightbar .MenuItem .Qte{
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Rightbar .MenuItem .Qte .Edit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--black);
+  background-color: var(--background);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all .3s ease;
+}
+.Rightbar .MenuItem .Qte .Edit:Hover{
+  transform: scale(0.95);
+}
+.Rightbar .MenuItem .Price{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--lighwhite);
+}
+.Sidebar{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+.Item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 600;
+  color: var(--lighgreen);
+  padding: 25px 15px 25px 15px;
+  border-radius: 15px;
+  transition: all .3s ease;
+}
+.Item:hover{
+  cursor: pointer;
+  color: white;
+  background: var(--green);
+}
+.Item svg{
+  transition: all .3s ease;
+}
+.Item:hover svg{
+  color:  var(--green);
+}
+main{
+  padding: 0 25px;
+  width: 100%;
+}
+nav{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Search{
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 25px 15px 25px;
+  border-radius: 10px;
+}
+.Search input{
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lighgreen);
+  border: none;
+  outline: none;
+}
+.Search img{
+  width: 20px;
+}
+.Call{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+.Call a{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--green);
+}
+.Call .Button{
+  padding: 13px 23px 13px 23px;
+  border-radius: 10px;
+  border: solid 2px var(--green);
+  background: var(--green);
+  color: var(--background);
+  transition: all .3s ease;
+}
+.Call .Button:hover{
+  color: var(--green);
+  background: var(--background);
+}
+.Content{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.Add{
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #454852;
+  color: var(--background);
+}
+.Filters{
+  display: flex;
+  gap: 10px;
+}
+.Filter{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 600;
+  color: var(--lighgreen);
+  border: solid 1px #DFDED9;
+  background: white;
+  border-radius: 15px;
+  width: 100px;
+  height: 120px;
+  transition: all .3s ease;
+}
+.Cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition: all .3s ease;
+}
+.Card .Head{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.Card .Head img{
+  border-radius: 15px;
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+}
+.Card .Head h3{
+  width: 200px;
+  font-size: 24px;
+}
+.Card .Head p{
+  width: 200px;
+}
+.Card .Info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 600;
+}
+.Card .Info p{
+  font-weight: 500;
+  color: var(--lighgreen);
+}
+.Card .Body{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Card{
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 325px;
+  width: calc(50% - 10px);
+}
+.Card:hover{
+  height: auto;
+}
+.Card:hover .Button{
+  opacity: 1;
+  transform: translateY(0px);
+}
+.Card .Button{
+  transition: all .3s ease;
+  opacity: 0;
+  transform: translateY(-120px);
+  text-decoration: none;
+  text-align: center;
+  margin-top: 25px;
+  padding: 13px 23px 13px 23px;
+  border-radius: 10px;
+  border: solid 2px var(--green);
+  background: var(--green);
+  color: var(--background);
+  transition: all .3s ease;
+}
+.Card .Button:hover{
+  color: var(--green);
+  background: white;
+}
+.Supps{
+  display: flex;
+  gap: 10px;
+}
+.Filter:hover{
+  cursor: pointer;
+  border-color: var(--green);
+  background:#E6E7E2;
+  color: var(--green);
+}
+.Supp{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 500;
+  color: var(--lighgreen);
+  border: solid 1px #DFDED9;
+  background: white;
+  border-radius: 75px;
+  padding: 5px 20px;
+  transition: all .3s ease;
+}
+.Supp:hover{
+  cursor: pointer;
+  border-color: var(--green);
+  background:#E6E7E2;
+  color: var(--green);
+}
